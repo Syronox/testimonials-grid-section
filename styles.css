@@ -1,0 +1,124 @@
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: white;
+}
+
+
+.grid-container {
+  width: 1440px;
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  grid-gap: 30px;
+  background-color: hsl(210, 46%, 95%);
+  grid-template-areas:
+    "grid-item-1 grid-item-1 grid-item-2 grid-item-3"
+    "grid-item-4 grid-item-5 grid-item-5 grid-item-3"
+}
+
+.grid-item-1 {
+  grid-area: grid-item-1;
+  background-color: hsl(263, 55%, 52%);
+  position: absolute;
+}
+
+.grid-item-2 {
+  grid-area: grid-item-2;
+  background-color: hsl(217, 19%, 35%);
+  width: 250px;
+}
+
+.grid-item-3 {
+  grid-area: grid-item-3;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  width: 250px;
+}
+
+.grid-item-4 {
+  grid-area: grid-item-4;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  width: 250px;
+}
+
+.grid-item-5 {
+  grid-area: grid-item-5;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.grid-item {
+  border-radius: 2%;
+  padding: 30px;
+}
+
+.big-text-div {
+  padding-top: 20px;
+}
+
+.small-text-div {
+  font-size: 1.1rem;
+}
+
+.quotation-mark {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 150px;
+  height: 150px;
+}
+
+.name-par {
+  margin: 4px 0;
+}
+
+.profile-img {
+  border: 2px solid;
+  margin-right: 15px;
+  float: left;
+  clear: right;
+  border-radius: 100%;
+}
+
+.big-text-outer-div {
+  position: relative;
+}
+
+@media screen and (max-width: 500px){
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: static;
+    transform: translate(0,0);
+    padding-left: 20px;
+  }
+  .grid-item{
+    width: 345px;
+  }
+  .grid-item-1{
+    position: static;
+  }
+  .quotation-mark{
+    left: 16%;
+  }
+  .attribution{
+
+    position: static !important;
+    transform: translate(0,0) !important;
+  }
+
+}
+
+.attribution {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
